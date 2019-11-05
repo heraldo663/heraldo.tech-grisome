@@ -14,4 +14,21 @@ h4,
 h5,
 h6 {
   font-family: "Nunito";
+  font-weight: 700;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: $f-paragraph;
+}
+
+small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: $f-muted;
 }

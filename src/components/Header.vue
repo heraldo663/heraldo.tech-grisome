@@ -4,8 +4,9 @@
       <g-link to="/">{{ $static.metadata.siteName }}</g-link>
     </strong>
     <nav class="nav">
-      <g-link class="nav__link" to="/">Home</g-link>
-      <g-link class="nav__link" to="/about/">About</g-link>
+      <g-link class="link" to="/">Posts</g-link>
+      <g-link class="link" to="/">About</g-link>
+      <g-link class="link" to="/about/">Contact</g-link>
     </nav>
   </header>
 </template>
@@ -17,3 +18,10 @@ query {
   }
 }
 </static-query>
+<style scoped>
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+</style>
