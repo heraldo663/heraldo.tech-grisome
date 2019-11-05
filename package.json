@@ -1,0 +1,21 @@
+{
+  "name": "heraldo.tech",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/plugin-critical": "^0.1.6",
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/source-wordpress": "^0.5.0",
+    "gridsome": "^0.7.0",
+    "vue-feather-icons": "^5.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-resources-loader": "^1.2.1"
+  }
+}
