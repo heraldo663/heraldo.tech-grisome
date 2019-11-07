@@ -46,7 +46,7 @@ module.exports = {
     }
   ],
   templates: {
-    WordPressPost: "/:year/:slug"
+    WordPressPost: "/:slug"
   },
   chainWebpack(config) {
     // Load variables for all vue-files

@@ -11,6 +11,7 @@
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/source-wordpress": "^0.5.0",
     "gridsome": "^0.7.0",
+    "gridsome-source-wordpress": "^0.4.13",
     "vue-feather-icons": "^5.0.0"
   },
   "devDependencies": {

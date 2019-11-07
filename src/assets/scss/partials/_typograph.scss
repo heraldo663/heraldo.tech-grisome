@@ -3,6 +3,10 @@
   font-size: 44px;
   line-height: 55px;
   color: $f-title;
+
+  @media (max-width: 756px) {
+    font-size: 38px;
+  }
 }
 
 .h2 {

@@ -1,5 +1,7 @@
 <template>
-  <p>© All rights are reserved | 2019 | Made by Heraldo Ecard Roque Filho</p>
+  <footer>
+    <p>© All rights are reserved | 2019 | Made by Heraldo Ecard Roque Filho</p>
+  </footer>
 </template>
 
 <style scoped>
@@ -10,7 +12,10 @@ p {
   font-size: 14px;
   line-height: 27px;
   text-align: center;
-  color: #252525;
   padding: 14px 0;
+}
+
+footer {
+  flex-shrink: 0;
 }
 </style>
