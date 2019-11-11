@@ -1,58 +1,126 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
-const path = require("path");
-
-function addStyleResource(rule) {
-  rule
-    .use("style-resource")
-    .loader("style-resources-loader")
-    .options({
-      patterns: [path.resolve(__dirname, "./src/assets/sass/*.scss")]
-    });
+const shiki  = require('shiki')
+const t = shiki.loadTheme('./OneDark-pro.json')
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+  }
 }
 
 module.exports = {
-  siteName: `Heraldo's Blog`,
+  siteName: "Heraldo's Blog",
+  siteDescription:
+    "This is my personal blog where i share my software development experiences.",
   siteUrl: "https://heraldo.tech",
-  siteDescription: `This is my personal blog where i share my software development experiences.`,
+  titleTemplate: `%s | Heraldo`,
+  icon: "src/favicon.png",
+
+  transformers: {
+    remark: {
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+      plugins: [
+        [
+          "gridsome-plugin-remark-shiki",
+          {
+            theme: "Material-Theme-Darker-High-Contrast"
+          }
+        ]
+      ]
+    }
+  },
+
   plugins: [
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/posts/**/*.md",
+        typeName: "Post",
+        refs: {
+          tags: {
+            typeName: "Tag",
+            create: true
+          },
+          author: {
+            typeName: "Author",
+            create: true
+          }
+        }
+      }
+    },
     {
       use: "@gridsome/plugin-google-analytics",
       options: {
-        id: "UA-XXXXXXXXX-X"
+        id: "UA-135446199-1"
       }
     },
     {
-      use: "@gridsome/plugin-critical",
+      use: "@gridsome/plugin-sitemap",
       options: {
-        paths: ["/"],
-        width: 1300,
-        height: 900
+        cacheTime: 600000 // default
       }
     },
     {
-      use: "@gridsome/source-wordpress",
+      use: "gridsome-plugin-rss",
       options: {
-        baseUrl: "https://cms.heraldo.tech",
-        apiBase: "wp-json",
-        typeName: "WordPress",
-        perPage: 100,
-        concurrent: 10
+        contentTypeName: "Post",
+        feedOptions: {
+          title: "Bleda, a Gridsome blog starter",
+          feed_url: "https://heraldo.tech/feed.xml",
+          site_url: "https://heraldo.tech"
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.description,
+          url: "https://heraldo.tech/" + node.slug,
+          author: node.author,
+          date: node.date
+        }),
+        output: {
+          dir: "./static",
+          name: "feed.xml"
+        }
       }
     }
   ],
+
   templates: {
-    WordPressPost: "/:slug"
+    Post: "/:title",
+    Tag: "/tag/:id",
+    Author: "/author/:id"
   },
-  chainWebpack(config) {
-    // Load variables for all vue-files
-    const types = ["vue-modules", "vue", "normal-modules", "normal"];
-    types.forEach(type => {
-      addStyleResource(config.module.rule("scss").oneOf(type));
-    });
+
+  chainWebpack: config => {
+    config.module
+      .rule("css")
+      .oneOf("normal")
+      .use("postcss-loader")
+      .tap(options => {
+        options.plugins.unshift(
+          ...[
+            require("postcss-import"),
+            require("postcss-nested"),
+            require("tailwindcss")
+          ]
+        );
+
+        if (process.env.NODE_ENV === "production") {
+          options.plugins.push(
+            ...[
+              require("@fullhuman/postcss-purgecss")({
+                content: ["src/assets/**/*.css", "src/**/*.vue", "src/**/*.js"],
+                extractors: [
+                  {
+                    extractor: TailwindExtractor,
+                    extensions: ["css", "vue", "js"]
+                  }
+                ],
+                whitelistPatterns: [/shiki/]
+              })
+            ]
+          );
+        }
+
+        return options;
+      });
   }
 };
