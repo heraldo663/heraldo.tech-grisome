@@ -25,7 +25,6 @@
           <p>Resistance is futile.</p>
         </div>
       </article>
-      <site-footer class="pb-8 sm:pb-10" />
     </main>
   </Layout>
 </template>

@@ -1,35 +1,23 @@
 <template>
   <footer
-    class="text-gray-700 text-sm leading-normal flex flex-wrap justify-between mx-auto max-w-3xl px-6 sm:px-12"
+    class="text-black text-sm leading-normal w-full flex flex-wrap justify-between mx-auto max-w-5xl py-8 md:py-10 px-6 sm:px-12"
   >
-    <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
+    <div class="w-full sm:w-3/4 mb-4 sm:mb-0">
       <p>© All rights are reserved | 2019 | Made by Heraldo Ecard Roque Filho.</p>
     </div>
-    <div class="w-full sm:w-1/2">
+    <div class="w-full sm:w-1/4">
       <nav>
         <ul class="flex sm:justify-end -mx-2">
           <li class="px-2">
-            <g-link
-              to="/"
-              class="border-b border-transparent hover:border-gray-400 transition-border-color"
-            >Home</g-link>
-          </li>
-          <li class="px-2">
-            <g-link
-              to="/about/"
-              class="border-b border-transparent hover:border-gray-400 transition-border-color"
-            >About</g-link>
-          </li>
-          <li class="px-2">
             <a
               href="/sitemap.xml"
-              class="border-b border-transparent hover:border-gray-400 transition-border-color"
+              class="border-b border-transparent hover:border-black transition-border-color"
             >Sitemap</a>
           </li>
           <li class="px-2">
             <a
               href="/feed.xml"
-              class="border-b border-transparent hover:border-gray-400 transition-border-color"
+              class="border-b border-transparent hover:border-black transition-border-color"
             >RSS Feed</a>
           </li>
         </ul>
