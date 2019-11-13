@@ -115,17 +115,6 @@ module.exports = {
         800: "#553c9a",
         900: "#44337a"
       },
-      pink: {
-        100: "#fff5f7",
-        200: "#fed7e2",
-        300: "#fbb6ce",
-        400: "#f687b3",
-        500: "#ed64a6",
-        600: "#d53f8c",
-        700: "#b83280",
-        800: "#97266d",
-        900: "#702459"
-      }
     },
     spacing: {
       px: "1px",
@@ -175,7 +164,8 @@ module.exports = {
       sm: ".125rem",
       default: ".25rem",
       lg: ".5rem",
-      full: "9999px"
+      full: "9999px",
+      p: "30px"
     },
     borderWidth: {
       default: "1px",

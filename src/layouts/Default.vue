@@ -2,9 +2,9 @@
   <div class="body min-h-full flex flex-col">
     <div class="flex-grow">
       <Header></Header>
-      <div>
+      <transition name="fade" appear>
         <slot />
-      </div>
+      </transition>
     </div>
     <Footer></Footer>
   </div>

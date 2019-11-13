@@ -1,17 +1,13 @@
 <template>
   <Layout class="bg-white">
     <main>
-      <!-- <header>
-        <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6 py-10 md:py-32 border-b border-gray-300">
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
-            <g-link to="/" class="text-black">Bleda</g-link>
-          </h1>
-          <p class="text-gray-700 text-lg sm:text-3xl">Thoughts, stories, and ideas.</p>
-        </div>
-      </header>-->
       <Hero></Hero>
-      <section>
-        <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+      <About></About>
+      <section class="mx-auto max-w-6xl">
+        <SectionTitle>Latest posts</SectionTitle>
+        <div class="flex flex-wrap">
+          <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+        </div>
       </section>
       <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
     </main>
@@ -24,13 +20,17 @@ import SiteFooter from "@/components/Footer";
 import PostItem from "@/components/PostItem";
 import Pagination from "@/components/Pagination";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
+import SectionTitle from "@/components/SectionTitle";
 
 export default {
   components: {
     PostItem,
     Pagination,
     SiteFooter,
-    Hero
+    Hero,
+    About,
+    SectionTitle
   },
   metaInfo() {
     return {

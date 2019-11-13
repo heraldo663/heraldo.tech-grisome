@@ -35,8 +35,6 @@
           </div>
         </footer>
       </article>
-
-      <site-footer class="pb-8 sm:pb-10" />
     </main>
   </Layout>
 </template>
@@ -46,14 +44,12 @@ import moment from 'moment'
 import config from '~/.temp/config.js'
 import Alert from '@/components/Alert'
 import slugify from '@sindresorhus/slugify'
-import SiteFooter from '@/components/Footer'
 import PostHeader from '~/components/PostHeader'
 
 export default {
   components: {
     Alert,
     PostHeader,
-    SiteFooter,
   },
   metaInfo () {
     return {

@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-5xl text-base px-6 flex justify-center sm:justify-between py-6 flex-col sm:flex-row items-center">
+  <div class="mx-auto max-w-6xl text-base px-6 flex justify-center sm:justify-between py-6 flex-col sm:flex-row items-center">
     <div>
       <g-link to="/" class="font-bold text-xl">Heraldo's Blog</g-link>
     </div>
