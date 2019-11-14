@@ -5,7 +5,7 @@
       <About></About>
       <section class="mx-auto max-w-6xl">
         <SectionTitle>Latest posts</SectionTitle>
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap posts">
           <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
         </div>
       </section>

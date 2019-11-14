@@ -1,5 +1,3 @@
-const shiki  = require('shiki')
-const t = shiki.loadTheme('./OneDark-pro.json')
 class TailwindExtractor {
   static extract(content) {
     return content.match(/[A-Za-z0-9-_:\/]+/g) || [];

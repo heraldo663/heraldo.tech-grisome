@@ -2,10 +2,14 @@
   <article class="mb-8 lg:w-1/2">
     <g-link :to="`${post.path}/`">
       <div class="px-6">
-        <div class="py-4 sm:py-8 border-2 rounded-p border-gray-300">
+        <div class="border-2 rounded-p shadow">
+          <div class="relative">
+            <div class="absolute w-full h-full overlay-color opacity-35 rounded-t-p"></div>
+            <g-image class="rounded-t-p" :src="post.cover"></g-image>
+          </div>
           <header class="text-left p-4">
             <h3
-              class="text-2xl sm:text-3xl font-sans mb-1 sm:mb-2 text-black font-bold"
+              class="text-2xl sm:text-3xl font-sans mb-1 sm:mb-2 text-black-500 font-bold"
             >{{ post.title }}</h3>
             <small class="text-gray-700 text-xs">
               Published at
@@ -17,7 +21,10 @@
               <span>{{ post.timeToRead }} min read</span>
             </small>
           </header>
-          <p class="leading-normal text-gray-700 text-base p-4" v-html="excerpt(post, 280, ' ...')"></p>
+          <p
+            class="leading-normal text-black-600 text-base p-4"
+            v-html="excerpt(post, 280, ' ...')"
+          ></p>
         </div>
       </div>
     </g-link>
@@ -61,3 +68,19 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.g-image {
+  width: 100%;
+  object-fit: cover;
+  max-height: 210px;
+}
+
+.overlay-color {
+  background: #268BD2;
+}
+
+article:nth-child(2n) .overlay-color {
+  background: #3A3768;
+}
+</style>
