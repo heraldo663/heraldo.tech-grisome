@@ -4,6 +4,7 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
+    "develop:forestry": "gridsome develop -h 0.0.0.0 ",
     "explore": "gridsome explore",
     "newpost": "node scripts/newPost.js"
   },
