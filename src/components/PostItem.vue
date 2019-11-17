@@ -4,20 +4,25 @@
       <div class="px-6">
         <div class="border-2 rounded-p shadow">
           <div class="relative">
-            <div class="absolute w-full h-full overlay-color opacity-35 rounded-t-p"></div>
+            <div
+              class="absolute w-full h-full overlay-color opacity-35 rounded-t-p"
+            ></div>
             <g-image class="rounded-t-p" :src="post.cover"></g-image>
           </div>
           <header class="text-left p-4">
             <h3
               class="text-2xl sm:text-3xl font-sans mb-1 sm:mb-2 text-black-500 font-bold"
-            >{{ post.title }}</h3>
+            >
+              {{ post.title }}
+            </h3>
             <small class="text-gray-700 text-xs">
               Published at
-              <time
-                :datetime="post.datetime"
-                class="text-gray-700 text-xs"
-              >{{ formatPublishDate(post.datetime) }}</time>
-              <span v-if="post.author || (post.tags && post.tags.length > 0)">·</span>
+              <time :datetime="post.datetime" class="text-gray-700 text-xs">{{
+                formatPublishDate(post.datetime)
+              }}</time>
+              <span v-if="post.author || (post.tags && post.tags.length > 0)"
+                >·</span
+              >
               <span>{{ post.timeToRead }} min read</span>
             </small>
           </header>
@@ -77,10 +82,10 @@ export default {
 }
 
 .overlay-color {
-  background: #268BD2;
+  background: #268bd2;
 }
 
 article:nth-child(2n) .overlay-color {
-  background: #3A3768;
+  background: #3a3768;
 }
 </style>

@@ -6,10 +6,14 @@
       <section class="mx-auto max-w-6xl">
         <SectionTitle>Latest posts</SectionTitle>
         <div class="flex flex-wrap posts">
-          <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+          <post-item
+            v-for="edge in $page.posts.edges"
+            :key="edge.node.id"
+            :post="edge.node"
+          />
         </div>
       </section>
-      <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
+      <!-- <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" /> -->
     </main>
   </Layout>
 </template>
