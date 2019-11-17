@@ -1,8 +1,7 @@
 <template>
   <Layout class="bg-white">
     <main>
-      <Hero></Hero>
-      <About id="about"></About>
+
       <section class="mx-auto max-w-6xl">
         <SectionTitle>Latest posts</SectionTitle>
         <div class="flex flex-wrap posts">
@@ -14,8 +13,6 @@
         </div>
       </section>
       <!-- <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" /> -->
-
-      <!-- <Contact id="contact"></Contact> -->
     </main>
   </Layout>
 </template>
@@ -28,7 +25,6 @@ import Pagination from "@/components/Pagination";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import SectionTitle from "@/components/SectionTitle";
-import Contact from "@/components/Contact";
 
 export default {
   components: {
@@ -37,8 +33,7 @@ export default {
     SiteFooter,
     Hero,
     About,
-    SectionTitle,
-    Contact
+    SectionTitle
   },
   metaInfo() {
     return {

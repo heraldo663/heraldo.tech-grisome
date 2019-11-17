@@ -6,7 +6,12 @@
       :class="[post.fullscreen ? 'fullscreen' : 'max-h-cover']"
     >
       <div
-        class="absolute w-full h-full overlay-color opacity-35 rounded-t-p"
+        v-if="isIdEven"
+        class="absolute w-full h-full overlay-color-blue opacity-40"
+      ></div>
+      <div
+        v-else
+        class="absolute w-full h-full overlay-color-purble opacity-40"
       ></div>
       <div
         class="max-w-xl md:max-w-3xl xl:max-w-4xl text-center px-6 absolute z-10"
@@ -98,7 +103,20 @@ export default {
     },
     speedFactor() {
       return this.post.fullscreen ? 0.21 : 0.37;
+    },
+    isIdEven() {
+      console.log(this.post);
+      return true;
     }
   }
 };
 </script>
+
+<style scoped>
+.overlay-color-blue {
+  background: #268bd2;
+}
+.overlay-color-purple {
+  background: #3a3768;
+}
+</style>

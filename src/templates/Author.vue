@@ -23,27 +23,21 @@
             />
           </svg>
         </div>
-        <nav class="absolute top-0 left-0 z-20 mt-6 ml-6">
-          <g-link
-            to="/"
-            class="text-sm border text-gray-900 border-gray-400 opacity-75 hover:opacity-100 rounded-full px-4 py-2 transition-opacity"
-            >&larr; Home</g-link
-          >
-        </nav>
       </header>
-      <section>
-        <post-item
-          v-for="edge in $page.author.belongsTo.edges"
-          :key="edge.node.id"
-          :post="edge.node"
-        />
+      <section class="mx-auto max-w-6xl">
+        <div class="flex flex-wrap posts">
+          <post-item
+            v-for="edge in $page.author.belongsTo.edges"
+            :key="edge.node.id"
+            :post="edge.node"
+          />
+        </div>
       </section>
       <pagination
         :base="`${$page.author.path}`"
         :info="$page.author.belongsTo.pageInfo"
         v-if="$page.author.belongsTo.pageInfo.totalPages > 1"
       />
-      <site-footer class="py-8 sm:py-16" />
     </main>
   </Layout>
 </template>
@@ -52,14 +46,12 @@
 import moment from "moment";
 import config from "~/.temp/config.js";
 import PostItem from "@/components/PostItem";
-import SiteFooter from "@/components/Footer";
 import Pagination from "@/components/Pagination";
 
 export default {
   components: {
     PostItem,
     Pagination,
-    SiteFooter
   },
   metaInfo() {
     return {

@@ -140,15 +140,3 @@
   }
 }
 
-.post-cover {
-  &::after {
-    @apply absolute w-full h-48 left-0 bottom-0 z-0;
-    content: '';
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .5) 100%);
-  }
-
-  &.fullscreen::after {
-    @apply h-full;
-    background: rgba(0, 0, 0, .15);
-  }
-}

@@ -2,7 +2,7 @@
 title: "Writing posts"
 description: "Writing posts in Markdown with Bleda for Gridsome"
 date: 2019-02-28 15:16:11
-author: gridsome
+author: heraldo
 slug: writing-posts-markdown
 tags:
     - getting-started
