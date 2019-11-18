@@ -1,6 +1,6 @@
 <template>
   <section class="px-6 mx-auto my-12 md:my-24 max-w-xl">
-    <div class="border-l-2 border-blue-300 flex">
+    <div class="border-l-2 border-blue-300">
       <!-- <figure class="pl-4  mb-1">
         <g-image
           src="../../static/images/authors/heraldo.png"

@@ -82,8 +82,21 @@ export default {
 }
 
 .overlay-color {
+  transition: .2s;
   background: #268bd2;
 }
+
+.shadow {
+  transition: .2s;
+}
+
+.shadow:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.shadow:hover .overlay-color {
+  opacity: .45;
+}
+
 
 article:nth-child(2n) .overlay-color {
   background: #3a3768;
