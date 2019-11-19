@@ -78,6 +78,10 @@
             </div>
           </div>
         </footer>
+        <vue-disqus
+          shortname="heraldo-tech"
+          :identifier="$page.post.title"
+        ></vue-disqus>
       </article>
     </main>
   </Layout>
