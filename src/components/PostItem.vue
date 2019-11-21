@@ -55,7 +55,7 @@ export default {
         return post.excerpt;
       }
 
-      length = length || 280;
+      length = length || 240;
       clamp = clamp || " ...";
       let text = post.content
         .replace(/<pre(.|\n)*?<\/pre>/gm, "")

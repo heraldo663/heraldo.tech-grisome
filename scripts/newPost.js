@@ -3,7 +3,7 @@ const moment = require('moment')
 const slugify = require('@sindresorhus/slugify')
 
 const title = process.argv[2]
-const blogdir = './content/posts'
+const blogdir = process.argv[3] || './content/posts'
 const postDate = moment().format('YYYY-MM-DD HH:mm:ss')
 
 if (!title) {
@@ -18,7 +18,7 @@ title: "${title}"
 slug:
 description: ""
 date: ${postDate}
-author: bleda-gridsome
+author: Heraldo
 tags:
 cover:
 fullscreen: false

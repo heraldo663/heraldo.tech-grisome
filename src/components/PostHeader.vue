@@ -14,7 +14,7 @@
         class="absolute w-full h-full overlay-color-purble opacity-40"
       ></div>
       <div
-        class="max-w-xl md:max-w-3xl xl:max-w-4xl text-center px-6 absolute z-10"
+        class="max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto text-center px-6 absolute z-10"
         :class="[
           post.fullscreen
             ? 'flex flex-col items-center m-auto inset-0'
@@ -41,7 +41,7 @@
       </ClientOnly>
     </div>
     <div v-else class="pt-24">
-      <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6">
+      <div class="max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto  mx-auto text-center px-6">
         <h1
           class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-black"
         >
