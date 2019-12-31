@@ -25,13 +25,13 @@
             class="border-b font-normal border-transparent hover:border-black-500 transition-border-color"
           >Posts</a>
         </li>
-        <!-- <li class="px-2">
+        <li class="px-2">
           <a
             href="/#contact"
             class="border-b font-normal border-transparent hover:border-black-500 transition-border-color"
             >Contact</a
           >
-        </li>-->
+        </li>
       </ul>
     </nav>
   </div>

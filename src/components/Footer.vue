@@ -4,8 +4,8 @@
   >
     <div class="w-full sm:w-3/4 mb-4 sm:mb-0">
       <p>
-        @ 2020 Made by Heraldo Ecard Roque Filho | Illustration thanks to
-        <a href="https://undraw.co" target="_blank">Undraw</a>.
+        @ 2020 | Made by Heraldo Ecard Roque Filho with <a href="https://gridsome.org/" class="underline" target="_blank">Gridsome</a>  | Illustration thanks to
+        <a href="https://undraw.co" class="underline" target="_blank">Undraw</a>.
       </p>
     </div>
     <div class="w-full sm:w-1/4">

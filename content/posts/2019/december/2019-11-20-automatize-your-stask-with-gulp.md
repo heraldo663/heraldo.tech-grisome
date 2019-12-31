@@ -4,7 +4,10 @@ slug:
 description: ""
 date: 2019-11-20 13:16:13
 author: Heraldo
-tags: gulp, front-end, javascript
+tags:
+    - gulp
+    - front-end
+    - javascript
 cover:
 fullscreen: false
 ---
@@ -24,18 +27,17 @@ First, we should start a project with `npm init -y` for a basic setup. You will 
 
 ```json
 {
-  "name": "gulp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "gulp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
-
 ```
 
 In this project, we will be using SCSS as pre-processor, Rollup as our javascript bundler, and Nunjucks as a template engine. But remember that you can use many other tools with Gulp, like Webpack, Less, Ejs, and many more as an alternative.
