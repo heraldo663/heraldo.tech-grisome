@@ -6,11 +6,7 @@
       <section class="mx-auto max-w-6xl">
         <SectionTitle>Latest posts</SectionTitle>
         <div class="flex flex-wrap posts">
-          <post-item
-            v-for="edge in $page.posts.edges"
-            :key="edge.node.id"
-            :post="edge.node"
-          />
+          <post-item v-for="edge in posts" :key="edge.node.id" :post="edge.node" />
         </div>
       </section>
       <!-- <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" /> -->
@@ -71,6 +67,10 @@ export default {
     },
     ogImageUrl() {
       return `${this.config.siteUrl}/images/author/heraldo.png`;
+    },
+
+    posts() {
+      return this.$page.posts.edges.filter(edge => edge.node.draft !== true);
     }
   }
 };
@@ -95,6 +95,7 @@ export default {
           description
           path
           cover
+          draft
           tags {
             id
             title

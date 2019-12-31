@@ -89,6 +89,7 @@ export default {
           content
           excerpt
           description
+          draft
           path
           cover
           tags {

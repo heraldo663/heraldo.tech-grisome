@@ -10,6 +10,7 @@ tags:
     - javascript
 cover:
 fullscreen: false
+draft: false
 ---
 
 So to begin, what is Gulp.js? Gulp.js is a tool to automate and enhance your development workflow made in Javascript. With this tool, you can achieve some tasks like compiling your SCSS/SASS or any other pre-processor you want to use to CSS, optimize images for the web, compiling your javascript scripts, and generating sprites.

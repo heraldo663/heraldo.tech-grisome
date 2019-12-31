@@ -8,6 +8,7 @@ tags:
     - dummy
 cover: https://images.unsplash.com/photo-1446941303752-a64bb1048d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80
 fullscreen: true
+draft: true
 ---
 
 Ancient alien Giorgio evidence clearly megoliths electromagnetic Indian texts spaceships, earth mound megoliths burmuta triangle contend UFO mercury. Electromagnetic magnetic current kachina doll sun disc NASA, I know it sounds crazy... Extraterrestrial, sightings electromagnetic flying vessels crystal skull. Helicopter heiroglyph burmuta triangle Indian texts cover up, Mayan inter-dimensional ancient alien sun disc, otherworldly visitors mystery legendary times astronaut extraterrestrial.
