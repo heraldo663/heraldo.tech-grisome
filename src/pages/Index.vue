@@ -15,7 +15,7 @@
       </section>
       <!-- <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" /> -->
 
-      <!-- <Contact id="contact"></Contact> -->
+      <Contact id="contact"></Contact>
     </main>
   </Layout>
 </template>

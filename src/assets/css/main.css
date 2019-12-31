@@ -10,4 +10,6 @@
 
 @import 'tailwindcss/utilities';
 
-@import 'components/transition.css'
+@import 'components/transition.css';
+
+@import 'components/extra.css';

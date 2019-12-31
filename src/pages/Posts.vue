@@ -3,22 +3,14 @@
     <main>
       <section class="mx-auto max-w-6xl">
         <div class="py-24">
-          <div
-            class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6"
-          >
+          <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6">
             <h1
               class="text-3xl sm:text-5xl inline-block leading-tight font-sans font-bold mb-2 border-b-2 text-black-400 border-blue-300"
-            >
-              Latest posts
-            </h1>
+            >Latest posts</h1>
           </div>
         </div>
         <div class="flex flex-wrap posts">
-          <post-item
-            v-for="edge in $page.posts.edges"
-            :key="edge.node.id"
-            :post="edge.node"
-          />
+          <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
         </div>
       </section>
       <!-- <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" /> -->

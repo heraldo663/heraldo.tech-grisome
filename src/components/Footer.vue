@@ -4,7 +4,8 @@
   >
     <div class="w-full sm:w-3/4 mb-4 sm:mb-0">
       <p>
-        © All rights are reserved | 2019 | Made by Heraldo Ecard Roque Filho.
+        @ 2020 Made by Heraldo Ecard Roque Filho | Illustration thanks to
+        <a href="https://undraw.co" target="_blank">Undraw</a>.
       </p>
     </div>
     <div class="w-full sm:w-1/4">
@@ -14,15 +15,13 @@
             <a
               href="/sitemap.xml"
               class="border-b border-transparent hover:border-black transition-border-color"
-              >Sitemap</a
-            >
+            >Sitemap</a>
           </li>
           <li class="px-2">
             <a
               href="/feed.xml"
               class="border-b border-transparent hover:border-black transition-border-color"
-              >RSS Feed</a
-            >
+            >RSS Feed</a>
           </li>
         </ul>
       </nav>

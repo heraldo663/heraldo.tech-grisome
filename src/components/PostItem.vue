@@ -28,7 +28,7 @@
           </header>
           <p
             class="leading-normal text-black-600 text-base p-4"
-            v-html="excerpt(post, 280, ' ...')"
+            v-html="excerpt(post, 220, ' ...')"
           ></p>
         </div>
       </div>

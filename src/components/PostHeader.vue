@@ -5,14 +5,8 @@
       class="post-cover overflow-hidden relative"
       :class="[post.fullscreen ? 'fullscreen' : 'max-h-cover']"
     >
-      <div
-        v-if="isIdEven"
-        class="absolute w-full h-full overlay-color-blue opacity-40"
-      ></div>
-      <div
-        v-else
-        class="absolute w-full h-full overlay-color-purble opacity-40"
-      ></div>
+      <div v-if="isIdEven" class="absolute w-full h-full overlay-color-blue opacity-40"></div>
+      <div v-else class="absolute w-full h-full overlay-color-purble opacity-40"></div>
       <div
         class="max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto text-center px-6 absolute z-10"
         :class="[
@@ -24,13 +18,14 @@
         <div class="m-auto">
           <h1
             class="text-3xl sm:text-5xl font-sans font-bold leading-tight mb-2 text-white"
-          >
-            {{ post.title }}
-          </h1>
+          >{{ post.title }}</h1>
           <p class="text-white">
-            <time :datetime="post.datetime" class="capitalize">{{
+            <time :datetime="post.datetime" class="capitalize">
+              {{
               formattedPublishDate
-            }}</time> &bull; {{ post.timeToRead }} min read
+              }}
+            </time>
+            &bull; {{ post.timeToRead }} min read
           </p>
         </div>
       </div>
@@ -41,17 +36,16 @@
       </ClientOnly>
     </div>
     <div v-else class="pt-24">
-      <div class="max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto  mx-auto text-center px-6">
+      <div class="max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto mx-auto text-center px-6">
         <h1
           class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-black"
-        >
-          {{ post.title }}
-        </h1>
+        >{{ post.title }}</h1>
         <p class="text-gray-700">
-
-          <time :datetime="post.datetime" class="capitalize">{{
+          <time :datetime="post.datetime" class="capitalize">
+            {{
             formattedPublishDate
-          }}</time>
+            }}
+          </time>
           &bull;
           {{ post.timeToRead }} min read
         </p>

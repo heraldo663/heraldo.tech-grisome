@@ -9,7 +9,7 @@
           width="100"
           class="rounded-full p-4 sm:p-0"
         />
-      </figure> -->
+      </figure>-->
       <p class="pl-4 text-black-600 w-full">
         I’m Heraldo Ecard Roque Filho, located in Nova Firiburgo Brazil,
         currently working as a front end developer on M3. I’m a self-taught
